@@ -10,6 +10,8 @@ public class Grappling : MonoBehaviour
     public Transform GunTip, Camera, Player;
     private float MaxDistance = 500f;
     private SpringJoint Joint;
+    public GameObject GrapplingPoint;
+    private bool CanGrapple;
 
     void Awake ()
     {
@@ -18,6 +20,9 @@ public class Grappling : MonoBehaviour
 
     void Update()
     {
+        
+        DetectGrapplingPoint();
+        
         if (Input.GetMouseButtonDown(0))
         {
             StartGrapple();
@@ -31,7 +36,7 @@ public class Grappling : MonoBehaviour
     void StartGrapple()
     {
         RaycastHit hit;
-        if (Physics.RaycastHit2D.Circlecast(Camera.position, 20f, Camera.forward, out hit, MaxDistance, WhatIsGrappable))
+        if (Physics.SphereCast(Camera.position, 5f, Camera.forward, out hit, MaxDistance, WhatIsGrappable) && CanGrapple)
         {
             GrapplePoint = hit.point;
             Joint = Player.gameObject.AddComponent<SpringJoint>();
@@ -49,6 +54,8 @@ public class Grappling : MonoBehaviour
 
             lr.positionCount = 2;
             CurrentGrapplePosition = GunTip.position;
+
+            CanGrapple = false;
         }
     }
 
@@ -85,4 +92,17 @@ public class Grappling : MonoBehaviour
     {
         return GrapplePoint;
     }
+
+    void DetectGrapplingPoint()
+    {
+        RaycastHit Detect;
+        if (Physics.SphereCast(Camera.position, 5f, Camera.forward, out Detect, MaxDistance, WhatIsGrappable))
+        {
+            GrapplePoint = Detect.point;
+            Instantiate(GrapplingPoint, GrapplePoint, Quaternion.identity);
+            CanGrapple = true;
+        }
+
+    }
+
 }

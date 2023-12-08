@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 1380464612883618983}
   - component: {fileID: 4138171573985757595}
   - component: {fileID: 658498429682581829}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: P_Grappling_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
