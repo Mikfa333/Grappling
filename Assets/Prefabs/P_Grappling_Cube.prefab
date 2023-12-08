@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 179857996856714632}
   - component: {fileID: 7236890218740365742}
   - component: {fileID: 6616032254302581919}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grappling_Point (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 6505401001467702921}
   - component: {fileID: 3987764485906454468}
   - component: {fileID: 1937024556990235617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grappling_Point (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 4085117547230273451}
   - component: {fileID: 8400749243945442342}
   - component: {fileID: 1655678910769917697}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grappling_Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 2939801756574474978}
   - component: {fileID: 8788881418497652864}
   - component: {fileID: 6927432824223000167}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grappling_Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 1380464612883618983}
   - component: {fileID: 4138171573985757595}
   - component: {fileID: 658498429682581829}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: P_Grappling_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
